@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasty Bites Restaurant</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">🍽 Tasty Bites</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<button id="darkBtn" onclick="toggleDarkMode()">🌙</button>
+
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h1>Tasty Bites Restaurant</h1>
+<p>Fresh Food • Great Taste • Best Experience</p>
+
+<h3 id="clock"></h3>
+
+<br>
+
+<button class="btn" onclick="orderNow()">
+Order Now
+</button>
+
+<br><br>
+
+<h2>Happy Customers:
+<span id="count">0</span>+
+</h2>
+
+</div>
+</section>
+<section id="about">
+
+<h2>About Us</h2>
+
+<p>
+Welcome to Tasty Bites Restaurant, where great food meets exceptional hospitality.
+Founded with a passion for serving fresh, delicious, and high-quality meals, we
+have become a favorite dining destination for food lovers in the community.
+</p>
+
+<br>
+
+<p>
+Our talented chefs carefully prepare every dish using fresh ingredients,
+authentic recipes, and modern cooking techniques to ensure an unforgettable
+dining experience. From mouth-watering pizzas and burgers to refreshing
+beverages and delightful desserts, we offer something for everyone.
+</p>
+
+<br>
+
+<p>
+At Tasty Bites, we believe that dining is more than just eating—it's about
+creating memories with family and friends. Our comfortable atmosphere,
+friendly staff, and commitment to customer satisfaction make every visit
+special and enjoyable.
+</p>
+
+<br>
+
+<p>
+We are dedicated to maintaining the highest standards of food quality,
+cleanliness, and service. Whether you're joining us for a quick lunch,
+a family dinner, or a special celebration, we strive to make every
+moment memorable.
+</p>
+
+<br>
+
+<p>
+Thank you for choosing Tasty Bites Restaurant. We look forward to serving
+you and becoming your favorite place for delicious food and wonderful
+experiences.
+</p>
+
+</section>
+
+<section id="hours">
+
+    <h2>🕒 Opening Hours</h2>
+
+    <div class="card">
+
+        <p>Monday - Friday : 10:00 AM - 10:00 PM</p>
+
+        <p>Saturday : 9:00 AM - 11:00 PM</p>
+
+        <p>Sunday : 9:00 AM - 11:00 PM</p>
+
+        <p><strong>Open All Holidays</strong></p>
+
+    </div>
+
+</section>
+
+<section id="menu">
+
+<h2>Our Menu</h2>
+
+<input
+type="text"
+id="search"
+placeholder="Search Food..."
+onkeyup="searchFood()">
+
+<div class="menu-container">
+
+
+<div class="card">
+    <h3>🍕 Pizza</h3>
+    <p>₹199</p>
+
+    <button onclick="addToCart('Pizza',199)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🍔 Burger</h3>
+    <p>₹149</p>
+
+    <button onclick="addToCart('Burger',149)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🍝 Pasta</h3>
+    <p>₹179</p>
+
+    <button onclick="addToCart('Pasta',179)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🍟 French Fries</h3>
+    <p>₹99</p>
+
+    <button onclick="addToCart('French Fries',99)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🥤 Cold Coffee</h3>
+    <p>₹120</p>
+
+    <button onclick="addToCart('Cold Coffee',120)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🍰 Chocolate Cake</h3>
+    <p>₹160</p>
+
+    <button onclick="addToCart('Chocolate Cake',160)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🌮 Tacos</h3>
+    <p>₹180</p>
+
+    <button onclick="addToCart('Tacos',180)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🥪 Sandwich</h3>
+     <p>₹130</p>
+
+    <button onclick="addToCart('Sandwich',130)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🍜 Noodles</h3>
+    <p>₹170</p>
+
+    <button onclick="addToCart('Noodles',170)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🍗 Chicken Wings</h3>
+    <p>₹220</p>
+
+    <button onclick="addToCart('Chicken wings',220)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🥗 Veg Salad</h3>
+    <p>₹140</p>
+
+    <button onclick="addToCart('Veg salad',140)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🍨 Ice Cream</h3>
+    <p>₹89</p>
+
+    <button onclick="addToCart('Ice Cream',89)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🥘 Biryani</h3>
+    <p>₹249</p>
+
+    <button onclick="addToCart('Biryani',249)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🍹 Fresh Juice</h3>
+    <p>₹110</p>
+
+    <button onclick="addToCart('Fresh juice',110)">
+        Add To Cart
+    </button>
+</div>
+
+<div class="card">
+    <h3>🧀 Garlic Bread</h3>
+    <p>₹129</p>
+
+    <button onclick="addToCart('Garlic Bread',129)">
+        Add To Cart
+    </button>
+</div>
+
+
+</div>
+
+</section>
+
+<section id="offers">
+
+<h2>🔥 Today's Special Offers</h2>
+
+<div class="menu-container">
+
+<div class="card">
+<h3>Family Combo</h3>
+<p>Pizza + Burger + Fries + Drinks</p>
+<p><b>₹499</b></p>
+</div>
+
+<div class="card">
+<h3>Student Combo</h3>
+<p>Burger + Fries + Coke</p>
+<p><b>₹199</b></p>
+</div>
+
+<div class="card">
+<h3>Weekend Special</h3>
+<p>Flat 20% OFF on all orders</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="cart">
+
+    <h2>🛒 Shopping Cart</h2>
+
+    <ul id="cartItems"></ul>
+
+    <h3>Total: ₹<span id="total">0</span></h3>
+
+    <br>
+
+    <button onclick="clearCart()">
+        Clear Cart
+    </button>
+
+</section>
+
+
+<section id="gallery">
+
+<h2>Food Gallery</h2>
+
+
+<div class="gallery">
+
+  <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" alt="Pizza">
+  <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Burger">
+  <img src="https://i.pinimg.com/1200x/97/da/b7/97dab7c64c03d85164e28a86a3f83ae3.jpg" alt="Food">
+  <img src="https://i.pinimg.com/736x/d0/cb/ce/d0cbce1b3e29b85639cfc06d43d4042a.jpg" alt="Food">
+  <img src="https://i.pinimg.com/736x/fd/a9/ad/fda9ad56b9d62070fec105cd93693129.jpg" alt="Food">
+  <img src="https://i.pinimg.com/736x/0e/76/0b/0e760b63f4e17f7a73c4fc91a6afde03.jpg" alt="Food">
+  <img src="https://i.pinimg.com/1200x/22/a7/d0/22a7d0ce7700f7169b5990609f5d458f.jpg" alt="Sandwich">
+  <img src="https://i.pinimg.com/1200x/dd/04/06/dd0406ba559d06f2dc37286485216294.jpg" alt="Food">
+  <img src="https://i.pinimg.com/1200x/59/83/3c/59833c5b2f618fb46a26fb7354248114.jpg" alt="Food">
+  <img src="https://i.pinimg.com/736x/ac/e1/30/ace1309df3647bd066b9890809d4bc4d.jpg" alt="Food">
+  <img src="https://i.pinimg.com/736x/02/94/d2/0294d24d7d393ef66be99cc833e1ec3b.jpg" alt="Food">
+  <img src="https://i.pinimg.com/736x/6b/eb/00/6beb002949a32755ae241b13f067f5c8.jpg" alt="Food">
+
+
+</div>
+
+
+</div>
+
+</section>
+
+<section id="booking">
+
+    <h2>🍽 Book a Table</h2>
+
+    <form onsubmit="bookTable(event)">
+
+        <input
+        type="text"
+        id="customerName"
+        placeholder="Your Name"
+        required>
+
+        <input
+        type="email"
+        id="customerEmail"
+        placeholder="Your Email"
+        required>
+
+        <input
+        type="date"
+        id="bookingDate"
+        required>
+
+        <input
+        type="time"
+        id="bookingTime"
+        required>
+
+        <input
+        type="number"
+        id="guests"
+        placeholder="Number of Guests"
+        min="1"
+        required>
+
+        <button type="submit">
+            Book Table
+        </button>
+
+    </form>
+
+</section>
+
+<section>
+
+<h2>Customer Reviews</h2>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Amazing food and service!
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Best restaurant in town.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Highly recommended.
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<form onsubmit="sendMessage(event)">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+id="email"
+placeholder="Your Email"
+required>
+
+<textarea
+rows="5"
+placeholder="Your Message"
+required>
+</textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<footer>
+<p>© 2026 Tasty Bites Restaurant</p>
+</footer>
+
+<script src = "script.js"></script>
+</script>
+</body>
+</html>
